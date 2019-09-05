@@ -8,4 +8,5 @@ m5expr development is hosted at the
 ## Introduction
 
 m5expr is a simple arithmetic expression parser and evaluator using
-PyParsing.
+PyParsing. m5expr was originally written for the i89 assembler for the
+Intel 8089 I/O processor.
