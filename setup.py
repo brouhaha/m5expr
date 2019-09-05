@@ -5,11 +5,11 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name = 'm5expr',
-    version = '1.0',
+    version = '1.0.1',
     author = 'Eric Smith',
     author_email = 'spacewar@gmail.com',
     description = 'A simple arithmetic expression parser and evaluator',
-    long_description_content = long_description,
+    long_description = long_description,
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/brouhaha/m5expr',
     packages = setuptools.find_packages(),
