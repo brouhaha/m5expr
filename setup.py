@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name = 'm5expr',
-    version = '1.0.2',
+    version = '1.0.3',
     author = 'Eric Smith',
     author_email = 'spacewar@gmail.com',
     description = 'A simple arithmetic expression parser and evaluator',
@@ -22,8 +22,8 @@ setuptools.setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Interpreters',
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
 )
