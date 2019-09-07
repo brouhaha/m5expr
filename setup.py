@@ -17,7 +17,6 @@ setuptools.setup(
     long_description = long_description,
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/brouhaha/m5expr',
-    download_url = 'htps://pypi.org/project/m5expr/',
     packages = setuptools.find_packages(),
     install_requires = [
         'pyparsing',
