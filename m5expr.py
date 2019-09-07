@@ -16,6 +16,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+__version__ = '1.0.8'
+__author__ = 'Eric Smith <spacewar@gmail.com>'
+
+__all__ = ['__version__', '__author__',
+           'M5Expr', 'UndefinedSymbol']           
+
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 import sys
@@ -28,8 +34,6 @@ from pyparsing import Combine, Forward, Literal, OneOrMore, Optional, \
     alphas, alphanums, hexnums, nums, opAssoc
 
 assert sys.version_info >= (3, 7, 0)
-
-__all__ = ['M5Expr', 'UndefinedSymbol']           
 
 
 class UndefinedSymbol(Exception):

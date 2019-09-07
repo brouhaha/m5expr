@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
+
 import setuptools
+
+from m5expr import __version__
 
 with open('README.md', 'r') as fh:
     long_description = fh.read()
@@ -13,6 +17,7 @@ setuptools.setup(
     long_description = long_description,
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/brouhaha/m5expr',
+    download_url = 'htps://pypi.org/project/m5expr/',
     packages = setuptools.find_packages(),
     install_requires = [
         'pyparsing',
@@ -21,8 +26,11 @@ setuptools.setup(
         'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Developers',
+        'Intended Audience :: Information Technology',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Interpreters',
     ],
