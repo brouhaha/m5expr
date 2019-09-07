@@ -29,7 +29,7 @@ from pyparsing import Combine, Forward, Literal, OneOrMore, Optional, \
 
 assert sys.version_info >= (3, 7, 0)
 
-__all__ = ['UndefinedSymbol', 'M5Expr']           
+__all__ = ['M5Expr', 'UndefinedSymbol']           
 
 
 class UndefinedSymbol(Exception):
@@ -49,7 +49,7 @@ _IorRPN = Union[int, _RPNItem]
 class _RPNInteger(_RPNItem):
     value: int
 
-    def eval(self, symtab) -> int:
+    def eval(self, symtab = None) -> int:
         return self.value
 
     def __str__(self):
@@ -59,7 +59,7 @@ class _RPNInteger(_RPNItem):
 class _RPNIdentifier(_RPNItem):
     identifier: str
 
-    def eval(self, symtab: Dict[str, int]) -> int:
+    def eval(self, symtab: Dict[str, int] = { }) -> int:
         if self.identifier not in symtab:
             raise UndefinedSymbol(self.identifier)
         return symtab[self.identifier]
@@ -72,7 +72,7 @@ class _UnaryOp(_RPNItem):
     name: str
     op1: Union[_RPNItem, int]
 
-    def eval(self, symtab: Dict[str, int]) -> int:
+    def eval(self, symtab: Dict[str, int] = { }) -> int:
         if isinstance(self.op1, _RPNItem):
             op1 = self.op1.eval(symtab)
         else:
@@ -93,7 +93,7 @@ class _BinaryOp(_RPNItem):
     op1: Union[_RPNItem, int]
     op2: Union[_RPNItem, int]
 
-    def eval(self, symtab: Dict[str, int]) -> int:
+    def eval(self, symtab: Dict[str, int] = { }) -> int:
         if isinstance(self.op1, _RPNItem):
             op1 = self.op1.eval(symtab)
         else:

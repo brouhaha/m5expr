@@ -2,10 +2,11 @@ import setuptools
 
 with open('README.md', 'r') as fh:
     long_description = fh.read()
+from m5expr import __version__
 
 setuptools.setup(
     name = 'm5expr',
-    version = '1.0.3',
+    version = __version__,
     author = 'Eric Smith',
     author_email = 'spacewar@gmail.com',
     description = 'A simple arithmetic expression parser and evaluator',
