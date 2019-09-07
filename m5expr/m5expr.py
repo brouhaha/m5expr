@@ -49,7 +49,7 @@ _IorRPN = Union[int, _RPNItem]
 class _RPNInteger(_RPNItem):
     value: int
 
-    def eval(self, symtab = None) -> int:
+    def eval(self, symtab: Dict[str, int]] = { }) -> int:
         return self.value
 
     def __str__(self):
