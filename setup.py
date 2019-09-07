@@ -17,10 +17,8 @@ setuptools.setup(
     long_description = long_description,
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/brouhaha/m5expr',
-    packages = setuptools.find_packages(),
-    install_requires = [
-        'pyparsing',
-    ],
+    py_modules = ['m5expr'],
+    install_requires = ['pyparsing'],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Environment :: Console',
